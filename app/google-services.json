@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "482950655337",
+    "firebase_url": "https://loginregister-f76fd.firebaseio.com",
+    "project_id": "loginregister-f76fd",
+    "storage_bucket": "loginregister-f76fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482950655337:android:384b16ef5af2081d",
+        "android_client_info": {
+          "package_name": "com.bednarek.loginregister"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482950655337-v7k2mrpsr9hb39479mueel3n43itdruf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bednarek.loginregister",
+            "certificate_hash": "efe8aa80cb70b9d0446ccb1e8b07f449caaf2f33"
+          }
+        },
+        {
+          "client_id": "482950655337-urjooerjdgr77k3doc1mj35jqduan041.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI_GqGapKzHMwhEpLHnCGWWg3XSLEsWqE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482950655337-urjooerjdgr77k3doc1mj35jqduan041.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
