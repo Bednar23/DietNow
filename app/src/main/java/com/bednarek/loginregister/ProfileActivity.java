@@ -1,99 +1,118 @@
 package com.bednarek.loginregister;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Toast;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
-public class ProfileActivity extends AppCompatActivity implements View.OnClickListener{
+public class ProfileActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
-    EditText Age, Height, Weight;
-    RadioGroup radGroupGender, radGroupActive;
-    int radioIDGender, radioIDActive, k;
-
+    DrawerLayout drawer;
+    NavigationView navigationView;
+    Toolbar toolbar = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        Age = (EditText) findViewById(R.id.Age);
-        Height = (EditText) findViewById(R.id.Height);
-        Weight = (EditText) findViewById(R.id.Weight);
-
-        radGroupGender = (RadioGroup) findViewById(R.id.radioGrpGender);
-        radGroupActive = (RadioGroup) findViewById(R.id.radioGrpActive);
-
-        findViewById(R.id.BtnLose).setOnClickListener(this);
-
-        findViewById(R.id.BtnKeep).setOnClickListener(this);
-
-        findViewById(R.id.BtnGain).setOnClickListener(this);
-
-    }
-
-    private void calculateCPM(int i){
-        int age = Integer.parseInt(Age.getText().toString().trim());
-        int height = Integer.parseInt(Height.getText().toString().trim());
-        int weight = Integer.parseInt(Weight.getText().toString().trim());
-
-        radioIDGender = radGroupGender.getCheckedRadioButtonId();
-        View radioButtonGender = radGroupGender.findViewById(radioIDGender);
-        int idGender = radGroupGender.indexOfChild(radioButtonGender);
-        RadioButton btnGender = (RadioButton) radGroupGender.getChildAt(idGender);
-        String selectionGender = (String) btnGender.getText();
-
-        radioIDActive = radGroupActive.getCheckedRadioButtonId();
-        View radioButtonActive = radGroupActive.findViewById(radioIDActive);
-        int idActive = radGroupActive.indexOfChild(radioButtonActive);
-        RadioButton btnActive = (RadioButton) radGroupActive.getChildAt(idActive);
-        String selectionActive = (String) btnActive.getText();
-
-        double activeFactor = 1, PPM = 1, CPM;
-
-        switch (selectionGender){
-            case "Kobieta":
-                PPM = 665.09 + (9.56 * weight) + (1.85 * height) - (4.67 * age);
-                break;
-
-            case "Mężczyzna":
-                PPM = 66.47 + (13.75 * weight) + (5 * height) - (6.75 * age);
-                break;
-        }
-
-        switch (selectionActive){
-            case "Znikomy":         activeFactor = 1.2; break;
-            case "Niski":           activeFactor = 1.3; break;
-            case "Średni":          activeFactor = 1.5; break;
-            case "Wysoki":          activeFactor = 1.75; break;
-            case "Bardzo wysoki":   activeFactor = 2.0; break;
-        }
-
-        CPM = ((PPM + (0.1 * PPM)) * activeFactor) + i;
-        long CPMrounded = Math.round(CPM);
-
-        Toast.makeText(getApplicationContext(),"Twoje zapotrzebowanie kaloryczne wynosi " + CPMrounded + "kcal", Toast.LENGTH_LONG).show();
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ProfileActivity.this, CalculateActivity.class));
+            }
+        });
 
 
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.BtnLose:
-                calculateCPM(-600);
-                break;
-            case R.id.BtnKeep:
-                calculateCPM(0);
-                break;
-            case R.id.BtnGain:
-                calculateCPM(600);
-                break;
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.profile, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        switch (id){
+
+            case R.id.nav_profile:
+                Intent profileAct = new Intent(ProfileActivity.this,ProfileActivity.class);
+                startActivity(profileAct);
+                break;
+            case R.id.nav_meals:
+                Intent mealsAct = new Intent(ProfileActivity.this,MealsActivity.class);
+                startActivity(mealsAct);
+                break;
+            case R.id.nav_recipes:
+                Intent recipesAct = new Intent(ProfileActivity.this,RecipesActivity.class);
+                startActivity(recipesAct);
+                break;
+            case R.id.nav_products:
+                Intent productsAct = new Intent(ProfileActivity.this,ProductsActivity.class);
+                startActivity(productsAct);
+                break;
+            case R.id.nav_shopping_list:
+                Intent shopping_listAct = new Intent(ProfileActivity.this, ShoppingListActivity.class);
+                startActivity(shopping_listAct);
+                break;
+        }
+
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 }

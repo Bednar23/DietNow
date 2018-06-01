@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_profile_blue"
+        android:title="@string/profile" />
+
+        <item
+            android:id="@+id/nav_meals"
+            android:icon="@drawable/kcal_icon"
+            android:title="@string/meals" />
+        <item
+            android:id="@+id/nav_recipes"
+            android:icon="@drawable/recipes_icon"
+            android:title="@string/recipes" />
+        <item
+            android:id="@+id/nav_products"
+            android:icon="@drawable/products_icon"
+            android:title="@string/products" />
+        <item
+            android:id="@+id/nav_shopping_list"
+            android:icon="@drawable/shopping_list_icon"
+            android:title="@string/shopping_list" />
+
+</menu>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_normal"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp"
+    tools:context=".CalculateActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/Age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#11000000"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Podaj swój wiek"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:textColorHint="#615f5f"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/Height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#11000000"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Podaj swój wzrost"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:textColorHint="#615f5f"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/Weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#11000000"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Podaj swoją masę ciała"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:textColorHint="#615f5f"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Wybierz płeć"
+                android:textSize="20dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGrpGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="Kobieta"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="Mężczyzna"
+                    android:textSize="18dp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Wybierz poziom swojej aktywności"
+                android:textSize="20dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGrpActive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioActiveNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="Znikomy"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioActiveLow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="Niski"
+                    android:textSize="16dp" />
+
+                <RadioButton
+                    android:id="@+id/radioActiveMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="Średni"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioActiveHigh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="Wysoki"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioActiveVeryHigh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="Bardzo wysoki"
+                    android:textSize="16sp" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/BtnLose"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Chcę schudnąć"
+                    android:clickable="true"
+                    android:background="@drawable/rounded_button2"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/BtnKeep"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Chcę utrzymać wagę"
+                    android:clickable="true"
+                    android:background="@drawable/rounded_button2"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/BtnGain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Chcę przytyć"
+                    android:clickable="true"
+                    android:background="@drawable/rounded_button2"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
