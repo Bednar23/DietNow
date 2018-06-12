@@ -37,6 +37,10 @@
         <activity
             android:name=".ShoppingListActivity"
             android:label="@string/title_activity_shopping_list"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AddMealActivity"
+            android:label="@string/title_activity_add_meal"
             android:theme="@style/AppTheme"></activity>
     </application>
 

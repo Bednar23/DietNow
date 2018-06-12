@@ -26,14 +26,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:background="#11000000"
+                android:background="@drawable/rounded_button2"
                 android:drawablePadding="10dp"
                 android:ems="10"
                 android:hint="Podaj swój wiek"
                 android:inputType="numberDecimal"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:textColorHint="#615f5f"
+                android:textColorHint="#000000"
                 android:textSize="20sp" />
 
             <EditText
@@ -41,14 +41,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:background="#11000000"
+                android:background="@drawable/rounded_button2"
                 android:drawablePadding="10dp"
                 android:ems="10"
                 android:hint="Podaj swój wzrost"
                 android:inputType="numberDecimal"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:textColorHint="#615f5f"
+                android:textColorHint="#000000"
                 android:textSize="20sp" />
 
             <EditText
@@ -56,22 +56,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:background="#11000000"
+                android:background="@drawable/rounded_button2"
                 android:drawablePadding="10dp"
                 android:ems="10"
                 android:hint="Podaj swoją masę ciała"
                 android:inputType="numberDecimal"
                 android:maxLines="1"
                 android:padding="5dp"
-                android:textColorHint="#615f5f"
+                android:textColorHint="#000000"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textGender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:text="Wybierz płeć"
+                android:textColor="#000000"
                 android:textSize="20dp" />
 
             <RadioGroup
@@ -107,8 +108,9 @@
                 android:id="@+id/textActive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:text="Wybierz poziom swojej aktywności"
+                android:textColor="#000000"
                 android:textSize="20dp" />
 
             <RadioGroup
@@ -170,18 +172,27 @@
 
             </RadioGroup>
 
+            <TextView
+                android:id="@+id/textGoal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Mój cel:"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:weightSum="3">
 
                 <Button
                     android:id="@+id/BtnLose"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Chcę schudnąć"
+                    android:text="schudnąć"
                     android:clickable="true"
                     android:background="@drawable/rounded_button2"
                     android:layout_weight="1" />
@@ -190,7 +201,8 @@
                     android:id="@+id/BtnKeep"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Chcę utrzymać wagę"
+                    android:text="utrzymać wagę"
+                    android:padding="1.3dp"
                     android:clickable="true"
                     android:background="@drawable/rounded_button2"
                     android:layout_weight="1" />
@@ -199,7 +211,7 @@
                     android:id="@+id/BtnGain"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Chcę przytyć"
+                    android:text="przytyć"
                     android:clickable="true"
                     android:background="@drawable/rounded_button2"
                     android:layout_weight="1" />

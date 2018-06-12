@@ -9,6 +9,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class CalculateActivity extends AppCompatActivity implements View.OnClickListener{
 
     EditText Age, Height, Weight;
@@ -94,6 +97,10 @@ public class CalculateActivity extends AppCompatActivity implements View.OnClick
                 calculateCPM(600);
                 break;
         }
+        int age = Integer.parseInt(Age.getText().toString().trim());
+
+
+
         startActivity(new Intent(CalculateActivity.this, ProfileActivity.class));
     }
 
