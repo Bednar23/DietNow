@@ -41,6 +41,10 @@
         <activity
             android:name=".AddMealActivity"
             android:label="@string/title_activity_add_meal"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AddRecipeActivity"
+            android:label="@string/title_activity_add_recipe"
             android:theme="@style/AppTheme"></activity>
     </application>
 

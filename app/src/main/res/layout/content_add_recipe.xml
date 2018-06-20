@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_normal"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".RecipesActivity"
+    tools:showIn="@layout/app_bar_add_recipe">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="525dp"
+        android:background="@drawable/background_normal"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".AddMealActivity"
+        tools:showIn="@layout/app_bar_add_recipe">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/MealIcon"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#2ec7de"
+                android:padding="15dp"
+                android:tint="@color/colorBtn2"
+                app:srcCompat="@drawable/kcal_icon" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="353dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/MealName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorBtn2"
+                android:drawablePadding="10dp"
+                android:hint="Nazwa posiłku"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorBtn2"
+                android:ems="10"
+                android:hint="Porcja"
+                android:inputType="number"
+                android:textSize="20sp" />
+
+            <SearchView
+                android:id="@+id/SearchFromRecipes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorBtn2"
+                android:iconifiedByDefault="false"
+                android:queryHint="Wybierz z produktów">
+
+            </SearchView>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+            <Button
+                android:id="@+id/AddRecipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_button"
+                android:clickable="true"
+                android:padding="16dp"
+                android:text="Dodaj produkt"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/AddMealBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/rounded_button"
+                android:clickable="true"
+                android:padding="16dp"
+                android:text="Dodaj przepis"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -14,23 +14,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class RecipesActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class AddRecipeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recipes);
+        setContentView(R.layout.activity_add_recipe);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(RecipesActivity.this, AddRecipeActivity.class));
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -38,11 +29,9 @@ public class RecipesActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
-
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -53,12 +42,15 @@ public class RecipesActivity extends AppCompatActivity
         }
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.profile, menu);
+        getMenuInflater().inflate(R.menu.add_meal, menu);
         return true;
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -84,29 +76,29 @@ public class RecipesActivity extends AppCompatActivity
         switch (id) {
 
             case R.id.nav_profile:
-                Intent profileAct = new Intent(RecipesActivity.this, ProfileActivity.class);
+                Intent profileAct = new Intent(AddRecipeActivity.this, ProfileActivity.class);
                 startActivity(profileAct);
                 break;
             case R.id.nav_meals:
-                Intent mealsAct = new Intent(RecipesActivity.this, MealsActivity.class);
+                Intent mealsAct = new Intent(AddRecipeActivity.this, MealsActivity.class);
                 startActivity(mealsAct);
                 break;
             case R.id.nav_recipes:
-                Intent recipesAct = new Intent(RecipesActivity.this, RecipesActivity.class);
+                Intent recipesAct = new Intent(AddRecipeActivity.this, RecipesActivity.class);
                 startActivity(recipesAct);
                 break;
             case R.id.nav_products:
-                Intent productsAct = new Intent(RecipesActivity.this, ProductsActivity.class);
+                Intent productsAct = new Intent(AddRecipeActivity.this, ProductsActivity.class);
                 startActivity(productsAct);
                 break;
             case R.id.nav_shopping_list:
-                Intent shopping_listAct = new Intent(RecipesActivity.this, ShoppingListActivity.class);
+                Intent shopping_listAct = new Intent(AddRecipeActivity.this, ShoppingListActivity.class);
                 startActivity(shopping_listAct);
                 break;
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

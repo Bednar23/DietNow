@@ -4,23 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_normal"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".RecipesActivity"
-    android:background="@drawable/background_normal"
     tools:showIn="@layout/app_bar_recipes">
 
 
-    <TextView
-        android:id="@+id/textViewRecipes"
+    <ExpandableListView
+        android:id="@+id/List_Recipes"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="171dp" />
+
+    <ImageView
+        android:id="@+id/RecipeIcon"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#2ec7de"
+        app:srcCompat="@drawable/recipes_icon"
+        android:contentDescription="TODO" />
+
+    <LinearLayout
+        android:id="@+id/Search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="150dp"
-        android:gravity="center"
-        android:text="@string/recipes"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="246dp"
-        android:layout_alignParentLeft="true" />
+        android:layout_below="@+id/RecipeIcon"
+        android:orientation="horizontal">
+
+        <SearchView
+            android:id="@+id/SearchFromRecipes"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorBtn2"
+            android:iconifiedByDefault="false"
+            android:queryHint="Wybierz z przepisów" />
+    </LinearLayout>
+
 </RelativeLayout>
