@@ -46,6 +46,10 @@
             android:name=".AddRecipeActivity"
             android:label="@string/title_activity_add_recipe"
             android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".AddProductActivity"
+            android:label="@string/title_activity_add_meal"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

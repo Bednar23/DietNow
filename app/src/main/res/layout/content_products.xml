@@ -1,26 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".ProductsActivity"
+    android:weightSum="10"
+    android:orientation="vertical"
     android:background="@drawable/background_normal"
     tools:showIn="@layout/app_bar_products">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" >
 
-    <TextView
-        android:id="@+id/textViewProducts"
+        <ImageView
+            android:id="@+id/Products"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:background="#2ec7de"
+            android:tint="@color/colorBtn2"
+            android:contentDescription="@string/products_chart"
+            app:srcCompat="@drawable/products_chart" />
+
+    </RelativeLayout>
+
+    <SearchView
+        android:id="@+id/SearchFromProducts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="164dp"
-        android:gravity="center"
-        android:text="@string/products"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="246dp" />
+        android:background="@color/colorBtn2"
+        android:iconifiedByDefault="false"
+        android:queryHint="Szukaj produktów..." />
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8" >
+
+        <ExpandableListView
+            android:id="@+id/List_products"
+            android:layout_width="match_parent"
+            android:layout_height="384dp" />
+    </RelativeLayout>
+
+</LinearLayout>

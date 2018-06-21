@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AddProductActivity"
+    android:background="@drawable/background_normal"
+    android:orientation="vertical"
+    tools:showIn="@layout/app_bar_add_product">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ProductIcon"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#2ec7de"
+            android:padding="10dp"
+            android:tint="@color/colorBtn2"
+            app:srcCompat="@drawable/products_chart" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/ProductName"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBtn2"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Nazwa produktu"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:textSize="20sp" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="Kalorie"
+                android:layout_width="100dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/Kcal" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="Białko"
+                android:layout_marginLeft="-2dp"
+                android:layout_width="100dp"
+                android:textStyle="bold"
+                android:id="@+id/proteins" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="Węglowodany"
+                android:layout_marginLeft="-30dp"
+                android:layout_width="100dp"
+                android:textStyle="bold"
+                android:id="@+id/carbs" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="Tłuszcze"
+                android:layout_marginLeft="10dp"
+                android:layout_width="100dp"
+                android:textStyle="bold"
+                android:id="@+id/fat" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ProductKcal"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBtn2"
+                android:hint="Kcal"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ProductProteins"
+                android:layout_marginTop="20dp"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBtn2"
+                android:hint="B"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ProductCarbs"
+                android:layout_marginTop="20dp"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBtn2"
+                android:hint="W"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ProductFat"
+                android:layout_marginTop="20dp"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBtn2"
+                android:hint="T"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/alergens"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Alergeny"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"
+            android:scaleY="2"
+            android:scaleX="2"
+            android:textStyle="bold" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <CheckBox android:id="@+id/checkbox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mięso"
+                android:layout_margin="3dp"
+                android:onClick="onCheckboxClicked"/>
+            <CheckBox android:id="@+id/checkbox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mleko"
+                android:layout_margin="3dp"
+                android:onClick="onCheckboxClicked"/>
+            <CheckBox android:id="@+id/checkbox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Orzechy"
+                android:layout_margin="3dp"
+                android:onClick="onCheckboxClicked"/>
+            <CheckBox android:id="@+id/checkbox4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seler"
+                android:onClick="onCheckboxClicked"/>
+            <CheckBox android:id="@+id/checkbox5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jajka"
+                android:layout_margin="3dp"
+                android:onClick="onCheckboxClicked"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/AddProductBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="54dp"
+            android:background="@drawable/rounded_button"
+            android:clickable="true"
+            android:padding="16dp"
+            android:text="Dodaj produkt"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</LinearLayout>

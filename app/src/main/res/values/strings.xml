@@ -24,5 +24,6 @@
     <string name="title_activity_add_meal">AddMealActivity</string>
     <string name="name">Name</string>
     <string name="title_activity_add_recipe">AddRecipeActivity</string>
+    <string name="products_chart">Products Chart</string>
 
 </resources>
