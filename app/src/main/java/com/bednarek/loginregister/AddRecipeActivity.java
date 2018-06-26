@@ -79,6 +79,10 @@ public class AddRecipeActivity extends AppCompatActivity implements NavigationVi
                 Intent profileAct = new Intent(AddRecipeActivity.this, ProfileActivity.class);
                 startActivity(profileAct);
                 break;
+            case R.id.nav_barcode:
+                Intent barcodeAct = new Intent(AddRecipeActivity.this, BarcodeActivity.class);
+                startActivity(barcodeAct);
+                break;
             case R.id.nav_meals:
                 Intent mealsAct = new Intent(AddRecipeActivity.this, MealsActivity.class);
                 startActivity(mealsAct);

@@ -79,6 +79,10 @@ public class AddMealActivity extends AppCompatActivity
                 Intent profileAct = new Intent(AddMealActivity.this, ProfileActivity.class);
                 startActivity(profileAct);
                 break;
+            case R.id.nav_barcode:
+                Intent barcodeAct = new Intent(AddMealActivity.this, BarcodeActivity.class);
+                startActivity(barcodeAct);
+                break;
             case R.id.nav_meals:
                 Intent mealsAct = new Intent(AddMealActivity.this, MealsActivity.class);
                 startActivity(mealsAct);

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".BarcodeActivity"
+    android:background="@drawable/background_normal"
+    android:orientation="vertical"
+    tools:showIn="@layout/app_bar_barcode">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/BarcodeIcon"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:background="#2ec7de"
+            android:padding="15dp"
+            app:srcCompat="@drawable/barcode" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/BarcodeScanBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:layout_marginLeft="20dp"
+            android:clickable="true"
+            android:background="#fff"
+            android:src="@drawable/barcode_scan" />
+        <EditText
+            android:id="@+id/EAN"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBtn2"
+            android:padding="23dp"
+            android:layout_marginRight="20dp"
+            android:hint="Kod EAN produktu"
+            android:drawablePadding="10dp"
+            android:textSize="21sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/CheckBarcodeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_button"
+        android:clickable="true"
+        android:padding="16dp"
+        android:text="Sprawdź informacje o produkcie"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+</LinearLayout>

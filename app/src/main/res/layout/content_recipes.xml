@@ -41,7 +41,6 @@
             android:id="@+id/SearchFromRecipes"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="20dp"
             android:background="@color/colorBtn2"
             android:iconifiedByDefault="false"
             android:queryHint="Wybierz z przepisów" />

@@ -87,6 +87,10 @@ public class ShoppingListActivity extends AppCompatActivity
                 Intent profileAct = new Intent(ShoppingListActivity.this, ProfileActivity.class);
                 startActivity(profileAct);
                 break;
+            case R.id.nav_barcode:
+                Intent barcodeAct = new Intent(ShoppingListActivity.this, BarcodeActivity.class);
+                startActivity(barcodeAct);
+                break;
             case R.id.nav_meals:
                 Intent mealsAct = new Intent(ShoppingListActivity.this, MealsActivity.class);
                 startActivity(mealsAct);

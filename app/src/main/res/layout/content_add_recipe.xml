@@ -13,7 +13,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="525dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/background_normal"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -29,8 +29,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
                 android:background="#2ec7de"
                 android:padding="15dp"
                 android:tint="@color/colorBtn2"
@@ -47,7 +45,6 @@
                 android:id="@+id/MealName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:background="@color/colorBtn2"
                 android:drawablePadding="10dp"
                 android:hint="Nazwa posiłku"

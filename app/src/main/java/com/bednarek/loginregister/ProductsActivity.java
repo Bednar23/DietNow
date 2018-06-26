@@ -130,6 +130,10 @@ public class ProductsActivity extends AppCompatActivity
                 Intent profileAct = new Intent(ProductsActivity.this, ProfileActivity.class);
                 startActivity(profileAct);
                 break;
+            case R.id.nav_barcode:
+                Intent barcodeAct = new Intent(ProductsActivity.this, BarcodeActivity.class);
+                startActivity(barcodeAct);
+                break;
             case R.id.nav_meals:
                 Intent mealsAct = new Intent(ProductsActivity.this, MealsActivity.class);
                 startActivity(mealsAct);
